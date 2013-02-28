@@ -3,7 +3,6 @@
 import requests
 
 DEFAULT_ELOPHANT_URL = 'http://api.elophant.com/v2/'
-DEFAULT_ELOPHANT_REGION = 'NA'
 
 
 class Elophant(object):
@@ -12,10 +11,10 @@ class Elophant(object):
 
     """
     ELOPHANT_URL = DEFAULT_ELOPHANT_URL
-    ELOPHANT_REGION = DEFAULT_ELOPHANT_REGION
 
-    def __init__(self, api_key=None):
-        self.api_key = api_key
+    def __init__(self, key=None, region=None):
+        self.key = key
+        self.region = region
 
     # GET summoner(string summonerName)
     # Returns a summoner's accountId, summonerId, account level, and profile icon id.
