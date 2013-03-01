@@ -36,8 +36,10 @@ class Elophant(object):
     def get_recent_games(self, account_id):
         return self._http_get('recent_games', account_id)
 
-    # GET summoner_names(CSV array summonerIds)
-    # Returns an array of summoner names in the same order as provided in the parameter summonerIds.
+    def get_summoner_names(self, summoner_ids):
+        if isinstance(summoner_ids, list):
+            summoner_ids = ','.join(str(x) for x in summoner_ids)
+        return self._http_get('summoner_names', summoner_ids)
 
     def get_leagues(self, summoner_id):
         return self._http_get('leagues', summoner_id)
