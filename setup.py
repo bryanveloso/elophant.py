@@ -18,7 +18,7 @@ setup(
     name='elophant',
     version='0.0.2',
     description='API Wrapper for Elophant(.com)',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     author='Bryan Veloso',
     author_email='bryan@revyver.com',
     url='https://github.com/bryanveloso/elophant.py',
