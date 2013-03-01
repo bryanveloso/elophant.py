@@ -1,14 +1,14 @@
 elophant.py
 ===========
 
-A minimalistic wrapper around the [Elophant](http://elophant.com/developers)
+A minimalistic wrapper around the `Elophant <http://elophant.com/developers>`_
 League of Legends statistics API.
 
 Usage
 -----
 
-To start, you'll need to sign up for an [API
-key](http://elophant.com/developers/new). Once you have that, here's how you
+To start, you'll need to sign up for an `API key
+<http://elophant.com/developers/new>`_. Once you have that, here's how you
 use it.::
 
     >>> from elophant import Elophant
