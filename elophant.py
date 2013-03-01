@@ -61,4 +61,4 @@ class Elophant(object):
         return self._http_get('team', team_id, 'end_of_game_stats', game_id)
 
     def get_team_ranked_stats(self, team_id):
-        return self._http_get('team_ranked_stats', team_id)
+        return self._http_get('team', team_id, 'ranked_stats')
