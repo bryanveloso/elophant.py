@@ -1,5 +1,5 @@
-elophant.py
-===========
+elophant.py |travis|
+====================
 
 A minimalistic wrapper around the `Elophant <http://elophant.com/developers>`_
 League of Legends statistics API.
@@ -24,3 +24,5 @@ Installation
 It's easy and foolproof! Like tower diving! ::
 
     pip install elophant
+
+.. |travis| image:: https://travis-ci.org/bryanveloso/elophant.py.png?branch=master
