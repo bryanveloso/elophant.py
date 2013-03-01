@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import requests
+from requests import get
 
-DEFAULT_ELOPHANT_URL = 'http://api.elophant.com/v2/'
+DEFAULT_ELOPHANT_URL = 'http://api.elophant.com/v2'
 
 
 class Elophant(object):
@@ -16,8 +16,16 @@ class Elophant(object):
         self.key = key
         self.region = region
 
-    # GET summoner(string summonerName)
-    # Returns a summoner's accountId, summonerId, account level, and profile icon id.
+    def _http_get(self, *parts):
+        uriparts = [self.ELOPHANT_URL, self.region]
+        for uripart in parts:
+            uriparts.append(str(uripart))
+        uri = '/'.join(uriparts)
+        print uri
+        return get(uri, params={'key': self.key}).json()
+
+    def summoner(self, summoner_name):
+        return self._http_get('summoner', summoner_name)
 
     # GET mastery_pages(int summonerId)
     # Returns an array with each mastery book page and subsequent talent point entries for a specific summoner.
