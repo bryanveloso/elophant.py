@@ -24,35 +24,35 @@ class Elophant(object):
         print uri
         return get(uri, params={'key': self.key}).json()
 
-    def summoner(self, summoner_name):
+    def get_summoner(self, summoner_name):
         return self._http_get('summoner', summoner_name)
 
-    # GET mastery_pages(int summonerId)
-    # Returns an array with each mastery book page and subsequent talent point entries for a specific summoner.
+    def get_mastery_pages(self, summoner_id):
+        return self._http_get('mastery_pages', summoner_id)
 
-    # GET rune_pages(int summonerId)
-    # Returns an array with each rune page and subsequent runes for a specific summoner.
+    def get_rune_pages(self, summoner_id):
+        return self._http_get('rune_pages', summoner_id)
 
-    # GET recent_games(int accountId)
-    # Returns the statistics for a summoner's 10 most recent games.
+    def get_recent_games(self, account_id):
+        return self._http_get('recent_games', account_id)
 
     # GET summoner_names(CSV array summonerIds)
     # Returns an array of summoner names in the same order as provided in the parameter summonerIds.
 
-    # GET leagues(int summonerId)
-    # Returns the current League for the requested summonerId, including all players within the League.
+    def get_leagues(self, summoner_id):
+        return self._http_get('leagues', summoner_id)
 
-    # GET ranked_stats(int accountId, string season)
-    # Returns every statistic for every champion accumulated from all ranked game types for a specified summoner and season.
+    def get_ranked_stats(self, account_id, season='current'):
+        return self._http_get('ranked_stats', account_id, season)
 
-    # GET summoner_team_info(int summonerId)
-    # Returns all team info regarding the specified summoner, including team overviews and all of the teams the summoner has created.
+    def get_summoner_team_info(self, summoner_id):
+        return self._http_get('summoner_team_info', summoner_id)
 
-    # GET in_progress_game_info(string summonerName)
-    # Returns the player information for both teams, bans (if draft or ranked), and observer information.
+    def get_in_progress_game_info(self, summoner_name):
+        return self._http_get('in_progress_game_info', summoner_name)
 
-    # GET team(string teamId)
-    # Returns a brief overview of a team, including gameType dependent Elos, the current roster, and basic match history statistics.
+    def get_team(self, team_id):
+        return self._http_get('team', team_id)
 
     # GET find_team(string tagOrName)
     # Returns a brief overview of a team, including gameType dependent Elos, the current roster, and basic match history statistics.
