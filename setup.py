@@ -16,7 +16,7 @@ if sys.argv[-1] == "publish":
 
 setup(
     name='elophant',
-    version='0.0.2',
+    version='0.0.3',
     description='API Wrapper for Elophant(.com)',
     long_description=open('README.rst').read(),
     author='Bryan Veloso',
