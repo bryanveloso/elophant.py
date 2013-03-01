@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from requests import get
 
 DEFAULT_ELOPHANT_URL = 'http://api.elophant.com/v2'
@@ -21,7 +20,6 @@ class Elophant(object):
         for uripart in parts:
             uriparts.append(str(uripart))
         uri = '/'.join(uriparts)
-        print uri
         return get(uri, params={'key': self.key}).json()
 
     def get_summoner(self, summoner_name):
