@@ -56,11 +56,11 @@ class Elophant(object):
     def get_team(self, team_id):
         return self._http_get('team', team_id)
 
-    # GET find_team(string tagOrName)
-    # Returns a brief overview of a team, including gameType dependent Elos, the current roster, and basic match history statistics.
+    def find_team(self, team_name):
+        return self._http_get('find_team', team_name)
 
-    # GET team_end_of_game_stats(string teamId, double gameId)
-    # Returns very detailed statistics about the specified match.
+    def get_team_end_of_game_stats(self, team_id, game_id):
+        return self._http_get('team', team_id, 'end_of_game_stats', game_id)
 
-    # GET team_ranked_stats(string teamId)
-    # Returns each team member's statistics for the specified team. This call provides very similar results to getRankedStats.
+    def get_team_ranked_stats(self, team_id):
+        return self._http_get('team_ranked_stats', team_id)
