@@ -9,7 +9,7 @@ Usage
 
 To start, you'll need to sign up for an `API key
 <http://elophant.com/developers/new>`_. Once you have that, here's how you
-use it.::
+use it.:
 
     >>> from elophant import Elophant
     >>> e = Elophant(key='IyDxAwvLhQbzEZPiVYJo', region='na')
@@ -21,6 +21,6 @@ use it.::
 Installation
 ------------
 
-It's easy and foolproof! Like tower diving!::
+It's easy and foolproof! Like tower diving!:
 
     pip install elophant
